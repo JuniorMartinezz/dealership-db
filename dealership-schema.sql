@@ -66,6 +66,22 @@ SELECT * FROM car --returns a limit by 5 results of cars in the car table
 ORDER BY car_name
 LIMIT 5;
 
+SELECT count(car_id), car_name
+FROM car
+WHERE car_name LIKE 'c%'
+GROUP BY car_name
+ORDER BY car_name
+
+SELECT moto_name, count(moto_id) -- select that returns a count kawasaki's
+FROM motorcycle
+WHERE moto_name LIKE 'kawasaki'
+GROUP BY moto_name
+
+SELECT count(moto_id) as "Moto's that start w/ 'k'" -- select that returns a count of moto's that starts with the letter 'k'
+FROM motorcycle
+WHERE moto_name LIKE 'k%'
+
+
 SELECT * FROM car -- selects all the cars with the name 'tida'
 WHERE car_name LIKE 'tida';
 
