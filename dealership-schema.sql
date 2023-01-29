@@ -104,12 +104,10 @@ WHERE car_name LIKE '___'
 ORDER BY car_year desc
 
 -- UNION that returns all cars and motos that have been launched on november, excluding the year
-SELECT "MOTO" AS TYPE, moto_name, moto_year
+SELECT 'MOTO' AS TYPE, moto_name, moto_year
 FROM motorcycle
 WHERE MONTH(moto_year) = 11
-
 UNION
-
 SELECT 'CAR' AS TYPE, car_name, car_year
 FROM car
 WHERE MONTH(car_year) = 11;
