@@ -1,3 +1,5 @@
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';
+
 CREATE DATABASE dealership;
 USE dealership;
 
@@ -18,12 +20,6 @@ CREATE TABLE motorcycle(
     moto_color VARCHAR(30) NOT NULL, 
     moto_year DATE NOT NULL
 );
-
-SHOW TABLES
-
-CREATE TABLE employees(
-
-)
 
 -- creating a table from another table already created
 CREATE TABLE car_copy AS
